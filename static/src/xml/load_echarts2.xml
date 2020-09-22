@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<templates id='template' xml:space='preserve'>
+    <t t-name="echarts_bargraph_template">
+        <div id="main" style="width:1900px;height: 900px;"></div>
+
+        <script>
+            //alert('木叶飞舞之处')
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('main'), 'light');
+            // 指定图表的配置项和数据
+            var option = {
+                title: {
+                    text: '(本月)邻寻客诉单售后原因分布'
+                },
+                tooltip: {
+                    text: '售后原因分布'
+                },
+                legend: {
+                    data:['售后原因','数量(单)']
+                },
+                xAxis: {
+                    name: '售后原因',
+                    data: ["不满意","腐坏","破损","取消订单","退差价","少发","错发","缺货","少重"]
+                },
+                yAxis: {
+                    name: '售后单数量(单)'
+                },
+                series: [{
+                    // name: '数量(单)',
+                    type: 'bar',
+                    data: []
+                },]
+            };
+            // 动态获取数据
+            $.ajax({
+                cache: false,
+                type: "POST",
+                url: "http://localhost:8069/inserttest", 
+                data: null,
+                dataType: "json", // 返回数据形式为json
+                error: function(request) {
+                    console.log("请求失败！")  
+                },
+                success: function(result) {
+                    console.log("发送请求成功!!");
+                    console.log(result);
+                for (i = 0; i &lt; 9; i++) {
+                        console.log(i)
+                        console.log(result[0][i])
+                        option.series[0].data.push(result[0][i]);
+                    };
+                console.log(option.series)
+                myChart.setOption(option);
+                }
+            });
+
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        </script>
+    </t>
+</templates>
