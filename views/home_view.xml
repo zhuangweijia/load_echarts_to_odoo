@@ -4,7 +4,7 @@
         <!--定义客户端动作-->
         <record id="action_echarts_china" model="ir.actions.client">
             <field name="name">Echarts</field>
-            <field name="tag">load_echarts.load_echarts_china</field>
+            <field name="tag">load_echarts_map.load_echarts_china</field>
         </record>
 
         <!--根菜单-->
@@ -23,7 +23,7 @@
         <!--定义客户端动作2-->
         <record id="action_echarts_bargraph" model="ir.actions.client">
             <field name="name">bargraph</field>
-            <field name="tag">load_echarts2.load_echarts_bargraph</field>
+            <field name="tag">load_echarts_complaint.load_echarts_bargraph</field>
         </record>
 
         <!--二级菜单绑定动作-->

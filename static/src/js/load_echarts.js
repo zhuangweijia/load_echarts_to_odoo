@@ -1,4 +1,4 @@
-odoo.define('load_echarts', function (require) {
+odoo.define('load_echarts_map', function (require) {
     "use strict";
     var core = require('web.core');
     var Widget = require('web.Widget');
@@ -21,11 +21,11 @@ odoo.define('load_echarts', function (require) {
 
     });
     // 对应client_action中的tag
-    core.action_registry.add('load_echarts.load_echarts_china', Echarts);
+    core.action_registry.add('load_echarts_map.load_echarts_china', Echarts);
 })
 
 
-odoo.define('load_echarts2', function (require) {
+odoo.define('load_echarts_complaint', function (require) {
     "use strict";
     var core = require('web.core');
     var Widget = require('web.Widget');
@@ -48,5 +48,5 @@ odoo.define('load_echarts2', function (require) {
 
     });
     // 对应client_action中的tag
-    core.action_registry.add('load_echarts2.load_echarts_bargraph', bargraph);
+    core.action_registry.add('load_echarts_complaint.load_echarts_bargraph', bargraph);
 })

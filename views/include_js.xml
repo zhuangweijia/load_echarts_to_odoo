@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <odoo>
     <data>
-         <template id="load_echarts" name="load_echarts" inherit_id="web.assets_backend">
+         <template id="load_echarts_test" name="load_echarts_test" inherit_id="web.assets_backend">
             <xpath expr="." position="inside">
-                <script type="text/javascript" src="/load_echarts/static/src/js/echarts.min.js"></script>
-                <script type="text/javascript" src="/load_echarts/static/src/js/china.js"></script>
-                <script type="text/javascript" src="/load_echarts/static/src/js/load_echarts.js"></script>
+                <script type="text/javascript" src="/load_echarts_to_odoo/static/src/js/echarts.min.js"></script>
+                <script type="text/javascript" src="/load_echarts_to_odoo/static/src/js/china.js"></script>
+                <script type="text/javascript" src="/load_echarts_to_odoo/static/src/js/load_echarts.js"></script>
             </xpath>
         </template>
     </data>

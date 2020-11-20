@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <templates id='template' xml:space='preserve'>
     <t t-name="echarts_bargraph_template">
-        <div id="main" style="width:1900px;height: 900px;"></div>
+        <div id="main" style="width:100%; height:100%;"></div>
 
         <script>
             //alert('木叶飞舞之处')
